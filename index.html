@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aakash's CoViD-19 Tracker</title>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        width: 100%;
+        height: 100vh;
+      }
+      #head{
+        position:absolute;
+        left: 50px;
+        top: 0;
+        z-index: 10;
+      }
+      #head h2{
+        display: inline;
+        background-color: rgba(0, 0, 0, 0.671);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="head">
+      <h2>Aakash's CoViD-19 Tracker Web</h2>
+    </div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <script src="index.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiYWFrYXNoZGF2ZTIxIiwiYSI6ImNrcGsxODdjYzNhOG4ycGxsMjNkMG5tajcifQ.00-GAGB1vLd3OLQa_jKjqA";
+      
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/dark-v10",
+        zoom: 1,
+        center: [0, 20],
+      });
+    </script>
+  </body>
+</html>
